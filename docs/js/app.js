@@ -8,12 +8,34 @@ let markers = {};
 let userLocation = null;
 let currentFeaturedCast = null;
 
+// Authentic community taglines for stochastic rotation on visit
+const COMMUNITY_TAGLINES = [
+  "Don't dream it, be it.",
+  "Bring your toast & water pistols.",
+  "Floor shows, fishnets & midnight madness.",
+  "Virgins welcome. Sacrifices optional.",
+  "Give yourself over to absolute pleasure.",
+  "35mm reels & live callbacks worldwide.",
+  "Lipstick, lab coats, and live cinema.",
+];
+
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   initMap();
+  initStochasticTagline();
   loadCastDatabase();
   setupEventListeners();
 });
+
+/**
+ * Random Underground Community Tagline
+ */
+function initStochasticTagline() {
+  const taglineElem = document.getElementById("randomTagline");
+  if (!taglineElem) return;
+  const randomIndex = Math.floor(Math.random() * COMMUNITY_TAGLINES.length);
+  taglineElem.textContent = COMMUNITY_TAGLINES[randomIndex];
+}
 
 /**
  * Initialize Leaflet Map
@@ -149,42 +171,46 @@ function renderWeeklyFeaturedCast(castList) {
   if (!featuredContainer || !currentFeaturedCast) return;
 
   featuredContainer.innerHTML = `
+    <div class="featured-header-label">
+      <span class="label-text">Cast of the Week</span>
+      <span class="label-rotation">Rotates Weekly</span>
+    </div>
     <div class="featured-card">
       <div class="cast-title">${escapeHtml(currentFeaturedCast.name)}</div>
       <div class="cast-location">
-        <i class="fa fa-map-marker"></i> ${escapeHtml(currentFeaturedCast.city)}, ${escapeHtml(currentFeaturedCast.state || currentFeaturedCast.country)}
+        ${escapeHtml(currentFeaturedCast.city)}, ${escapeHtml(currentFeaturedCast.state || currentFeaturedCast.country)}
       </div>
       <div class="cast-venue">
         <strong>Venue:</strong> ${escapeHtml(currentFeaturedCast.venue.name)}
       </div>
       <div class="cast-schedule">
-        <i class="fa fa-calendar"></i> <strong>Schedule:</strong> ${escapeHtml(currentFeaturedCast.schedule.details)} (${escapeHtml(currentFeaturedCast.schedule.showtime)})
+        <strong>Schedule:</strong> ${escapeHtml(currentFeaturedCast.schedule.details)} (${escapeHtml(currentFeaturedCast.schedule.showtime)})
       </div>
-      <p class="cast-bio">${escapeHtml(currentFeaturedCast.bio || "Live Rocky Horror Picture Show regular shadowcast.")}</p>
+      <p class="cast-bio">${escapeHtml(currentFeaturedCast.bio || "Regular Rocky Horror Picture Show shadowcast performances.")}</p>
       
       <div class="cast-links">
         ${
           currentFeaturedCast.links && currentFeaturedCast.links.tickets
-            ? `<a href="${currentFeaturedCast.links.tickets}" target="_blank" rel="noopener noreferrer" class="link-tickets"><i class="fa fa-ticket"></i> Get Tickets</a>`
+            ? `<a href="${currentFeaturedCast.links.tickets}" target="_blank" rel="noopener noreferrer" class="link-tickets">Tickets</a>`
             : ""
         }
         ${
           currentFeaturedCast.links && currentFeaturedCast.links.website
-            ? `<a href="${currentFeaturedCast.links.website}" target="_blank" rel="noopener noreferrer" class="link-website"><i class="fa fa-globe"></i> Website</a>`
+            ? `<a href="${currentFeaturedCast.links.website}" target="_blank" rel="noopener noreferrer" class="link-website">Website</a>`
             : ""
         }
         ${
           currentFeaturedCast.links && currentFeaturedCast.links.instagram
-            ? `<a href="${currentFeaturedCast.links.instagram}" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa fa-instagram"></i> Instagram</a>`
+            ? `<a href="${currentFeaturedCast.links.instagram}" target="_blank" rel="noopener noreferrer" class="link-social">Instagram</a>`
             : ""
         }
         ${
           currentFeaturedCast.links && currentFeaturedCast.links.facebook
-            ? `<a href="${currentFeaturedCast.links.facebook}" target="_blank" rel="noopener noreferrer" class="link-social"><i class="fa fa-facebook"></i> Facebook</a>`
+            ? `<a href="${currentFeaturedCast.links.facebook}" target="_blank" rel="noopener noreferrer" class="link-social">Facebook</a>`
             : ""
         }
-        <button onclick="focusCast('${currentFeaturedCast.id}')" class="btn-outline-neon" style="padding: 4px 10px; font-size: 0.8rem; margin-left: auto;">
-          <i class="fa fa-crosshairs"></i> View on Map
+        <button onclick="focusCast('${currentFeaturedCast.id}')" class="btn-outline-neon" style="padding: 4px 10px; font-size: 0.78rem; margin-left: auto;">
+          Show on Map
         </button>
       </div>
     </div>
@@ -215,20 +241,25 @@ function renderCastList(castList) {
   listContainer.innerHTML = castList
     .map((cast) => {
       const distanceHtml = cast.distance !== undefined
-        ? `<span class="distance-tag">${cast.distance.toFixed(1)} mi away</span>`
+        ? `<span class="distance-tag">${cast.distance.toFixed(1)} mi</span>`
         : "";
+
+      const stampText = cast.schedule.frequency === "Weekly"
+        ? "WEEKLY"
+        : (cast.schedule.frequency === "Bi-weekly" ? "2x MONTHLY" : "MONTHLY");
 
       return `
         <div class="cast-card" id="card-${cast.id}" onclick="focusCast('${cast.id}')">
           ${distanceHtml}
-          <div style="font-weight: 700; font-size: 1.05rem; color: #fff; margin-bottom: 2px;">
+          <div style="font-weight: 700; font-size: 1rem; color: #fff; margin-bottom: 3px;">
+            <span class="retro-stamp">${stampText}</span>
             ${escapeHtml(cast.name)}
           </div>
-          <div style="font-size: 0.85rem; color: var(--accent-cyan); margin-bottom: 4px;">
-            📍 ${escapeHtml(cast.venue.name)} - ${escapeHtml(cast.city)}, ${escapeHtml(cast.state || cast.country)}
+          <div style="font-size: 0.84rem; color: var(--accent-cyan); margin-bottom: 3px;">
+            ${escapeHtml(cast.venue.name)} &bull; ${escapeHtml(cast.city)}, ${escapeHtml(cast.state || cast.country)}
           </div>
-          <div style="font-size: 0.8rem; color: var(--text-muted);">
-            🕒 ${escapeHtml(cast.schedule.details)} (${escapeHtml(cast.schedule.showtime)})
+          <div style="font-size: 0.78rem; color: var(--text-muted);">
+            ${escapeHtml(cast.schedule.details)} (${escapeHtml(cast.schedule.showtime)})
           </div>
         </div>
       `;

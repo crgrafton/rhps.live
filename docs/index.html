@@ -1,27 +1,40 @@
 <!doctype html>
 <html lang="en">
 
+<!-- rip tim curry -->
 <head>
   <title>rhps.live | Find Live Rocky Horror Shadowcasts</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Global interactive map and directory to find regular live shadowcast performances of The Rocky Horror Picture Show.">
+  <meta name="tribute" content="rip tim curry">
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css?v=20260901_7">
+  <link rel="stylesheet" href="css/style.css?v=20260901_13">
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <a class="navbar-brand" href="#">
-      <span class="slash">//</span>rhps.live
-      <span class="live-badge">Shadowcast Map</span>
+      <div>
+        <span class="slash">//</span>rhps<span title="rip tim curry" style="cursor: default;">.</span>live
+        <span class="live-badge">Shadowcast Map</span>
+      </div>
+      <div id="randomTagline" class="brand-subtext"></div>
     </a>
+
+    <!-- Sponsor / Advertiser Link -->
+    <div class="nav-sponsor">
+      <span class="sponsor-tag">Sponsor</span>
+      <a href="mailto:sponsor@rhps.live?subject=Sponsorship%20Inquiry%20-%20rhps.live" class="sponsor-link" title="Click to send an email inquiry to sponsor@rhps.live">
+        Support the Scene: Your Theatre or Prop Shop Ad Here &bull; <span class="email-indicator"><i class="fa fa-envelope-o"></i> Email to Advertise</span>
+      </a>
+    </div>
 
     <div class="nav-actions">
       <a href="register.html" class="btn-neon" id="btnRegister">
@@ -53,9 +66,6 @@
     <aside class="sidebar">
       <!-- Weekly Featured Cast Section -->
       <div class="featured-section">
-        <div class="featured-badge">
-          <i class="fa fa-star"></i> Weekly Featured Cast
-        </div>
         <div id="featuredCastContainer">
           <!-- Dynamically populated by app.js -->
         </div>
@@ -91,7 +101,7 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Application JS -->
-  <script src="js/app.js?v=20260901_8"></script>
+  <script src="js/app.js?v=20260901_16"></script>
 </body>
 
 </html>
