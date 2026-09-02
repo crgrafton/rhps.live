@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Register Your Shadowcast | rhps.live</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Register your live Rocky Horror Picture Show shadowcast to be listed in the global directory on rhps.live.">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css?v=20260901_3">
+  <style>
+    .register-container {
+      max-width: 760px;
+      margin: 30px auto;
+      padding: 0 20px 40px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .register-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .form-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin: 20px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <span class="slash">//</span>rhps.live
+      <span class="live-badge">Shadowcast Map</span>
+    </a>
+
+    <div class="nav-actions">
+      <a href="index.html" class="btn-outline-neon">
+        <i class="fa fa-map-marker"></i> Back to Map
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Register Page Container -->
+  <main class="register-container">
+    <div class="register-card">
+      <h1 class="page-title">
+        <i class="fa fa-pencil-square-o" style="color: var(--accent-red);"></i> Register Your Shadowcast
+      </h1>
+      <p class="page-subtitle">
+        Submit your regular *Rocky Horror Picture Show* shadowcast performance details to be listed on the <code>rhps.live</code> interactive map and global directory.
+      </p>
+
+      <form id="registerCastForm">
+        <div class="form-section-title">Cast Details</div>
+        <div class="form-group">
+          <label for="regCastName">Cast Name *</label>
+          <input type="text" id="regCastName" class="form-control" placeholder="e.g. The Bawdy Caste" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regCity">City *</label>
+            <input type="text" id="regCity" class="form-control" placeholder="e.g. San Francisco" required>
+          </div>
+          <div class="form-group">
+            <label for="regState">State / Province *</label>
+            <input type="text" id="regState" class="form-control" placeholder="e.g. CA" required>
+          </div>
+          <div class="form-group">
+            <label for="regCountry">Country</label>
+            <input type="text" id="regCountry" class="form-control" placeholder="USA" value="USA">
+          </div>
+        </div>
+
+        <div class="form-section-title">Venue & Performance Location</div>
+        <div class="form-group">
+          <label for="regVenueName">Regular Venue Name *</label>
+          <input type="text" id="regVenueName" class="form-control" placeholder="e.g. Balboa Theatre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regVenueAddress">Venue Street Address *</label>
+          <input type="text" id="regVenueAddress" class="form-control" placeholder="e.g. 3630 Balboa St, San Francisco, CA 94121" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regLat">Latitude (Optional - used for exact map pin)</label>
+            <input type="number" step="any" id="regLat" class="form-control" placeholder="e.g. 37.7758">
+          </div>
+          <div class="form-group">
+            <label for="regLng">Longitude (Optional - used for exact map pin)</label>
+            <input type="number" step="any" id="regLng" class="form-control" placeholder="e.g. -122.4974">
+          </div>
+        </div>
+
+        <div class="form-section-title">Schedule & Showtimes</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regFrequency">Performance Frequency *</label>
+            <select id="regFrequency" class="form-control" required>
+              <option value="Weekly">Weekly</option>
+              <option value="Bi-weekly">Bi-weekly (Twice a month)</option>
+              <option value="Monthly" selected>Monthly</option>
+              <option value="Seasonal">Seasonal / Special Events</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="regShowtime">Standard Showtime *</label>
+            <input type="text" id="regShowtime" class="form-control" placeholder="e.g. 11:59 PM" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="regScheduleDetails">Schedule Details *</label>
+          <input type="text" id="regScheduleDetails" class="form-control" placeholder="e.g. Last Saturday of every month" required>
+        </div>
+
+        <div class="form-section-title">Links & Media</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regWebsite">Official Website</label>
+            <input type="url" id="regWebsite" class="form-control" placeholder="https://bawdycaste.com">
+          </div>
+          <div class="form-group">
+            <label for="regTickets">Ticketing URL</label>
+            <input type="url" id="regTickets" class="form-control" placeholder="https://...">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="regInstagram">Instagram URL</label>
+            <input type="url" id="regInstagram" class="form-control" placeholder="https://instagram.com/...">
+          </div>
+          <div class="form-group">
+            <label for="regFacebook">Facebook URL</label>
+            <input type="url" id="regFacebook" class="form-control" placeholder="https://facebook.com/...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="regBio">Short Cast Bio / History</label>
+          <textarea id="regBio" class="form-control" rows="3" placeholder="Tell the community about your cast history, traditions, and floor show..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-neon" style="width: 100%; justify-content: center; padding: 14px; font-size: 1rem; margin-top: 15px;">
+          <i class="fa fa-check"></i> Generate Registration Payload
+        </button>
+      </form>
+
+      <!-- Submission Output -->
+      <div id="submissionResult" style="display: none; margin-top: 20px;">
+        <div style="background: rgba(0, 229, 255, 0.1); border: 1px solid var(--accent-cyan); border-radius: 10px; padding: 18px; margin-bottom: 16px;">
+          <h3 style="color: var(--accent-cyan); margin-bottom: 8px; font-size: 1.15rem;">
+            <i class="fa fa-check-circle"></i> Registration Payload Generated!
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-main); margin-bottom: 12px; line-height: 1.4;">
+            Your cast entry has been formatted into the <code>rhps.live</code> plaintext format. Copy the JSON below and add it to <code>docs/data/casts.json</code> via a GitHub Pull Request or submit it to the directory maintainers.
+          </p>
+          <pre id="submissionCode" style="background: #0a0a0f; padding: 14px; border-radius: 8px; font-size: 0.85rem; overflow-x: auto; color: #a9ff9b; border: 1px solid var(--border-color);"></pre>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="btnCopyJson" onclick="copySubmissionData()" class="btn-neon" style="flex: 1; min-width: 180px; justify-content: center; padding: 12px;">
+            <i class="fa fa-clipboard"></i> Copy JSON to Clipboard
+          </button>
+          <button onclick="resetRegisterForm()" class="btn-outline-neon" style="flex: 1; min-width: 180px; justify-content: center; padding: 12px;">
+            <i class="fa fa-refresh"></i> Register Another Cast
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Embed Badge Section -->
+    <div class="register-card" style="margin-top: 30px;">
+      <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+        <i class="fa fa-code" style="color: var(--accent-cyan);"></i> Embed "Find us on rhps.live" Badge
+      </h2>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+        Add this compact badge to your cast website's footer to help fans locate your show on the global map.
+      </p>
+
+      <!-- Live Preview -->
+      <div style="background: rgba(0,0,0,0.4); border: 1px dashed var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 16px; text-align: center;">
+        <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">Live Preview</div>
+        <iframe src="embed.html" width="310" height="42" frameborder="0" scrolling="no" style="border: none; overflow: hidden; display: inline-block;"></iframe>
+      </div>
+
+      <div class="form-group">
+        <label>Copy & Paste HTML into your site footer:</label>
+        <div style="position: relative;">
+          <textarea id="embedHtmlSnippet" class="form-control" rows="2" readonly style="font-family: monospace; font-size: 0.8rem; background: #0a0a0f; color: #00e5ff;"><iframe src="https://rhps.live/embed.html" width="310" height="42" frameborder="0" scrolling="no" style="border:none; overflow:hidden;" title="Find us on rhps.live"></iframe></textarea>
+        </div>
+      </div>
+      <button onclick="navigator.clipboard.writeText(document.getElementById('embedHtmlSnippet').value); alert('Embed code copied to clipboard!');" class="btn-outline-neon" style="padding: 8px 16px;">
+        <i class="fa fa-clipboard"></i> Copy Embed HTML
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer & Disclaimers -->
+  <footer class="site-footer">
+    <div>
+      <strong>rhps.live</strong> &bull; Community Shadowcast Finder
+    </div>
+    <div style="max-width: 650px; font-size: 0.7rem; color: #777;">
+      <em>Disclaimer:</em> rhps.live is an independent, non-commercial fan directory. "The Rocky Horror Picture Show" is a registered trademark of 20th Century Studios / The Walt Disney Company. This site is not affiliated with, endorsed by, or sponsored by 20th Century Studios or Disney.
+    </div>
+    <div>
+      <a href="index.html"><i class="fa fa-map"></i> View Map</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('registerCastForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('regCastName').value.trim();
+      const castId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+      const formData = {
+        id: castId,
+        name: name,
+        city: document.getElementById('regCity').value.trim(),
+        state: document.getElementById('regState').value.trim(),
+        country: document.getElementById('regCountry').value.trim() || 'USA',
+        venue: {
+          name: document.getElementById('regVenueName').value.trim(),
+          address: document.getElementById('regVenueAddress').value.trim(),
+          coordinates: {
+            lat: parseFloat(document.getElementById('regLat').value) || 0,
+            lng: parseFloat(document.getElementById('regLng').value) || 0,
+          },
+        },
+        schedule: {
+          frequency: document.getElementById('regFrequency').value,
+          details: document.getElementById('regScheduleDetails').value.trim(),
+          showtime: document.getElementById('regShowtime').value.trim(),
+        },
+        links: {
+          website: document.getElementById('regWebsite').value.trim(),
+          tickets: document.getElementById('regTickets').value.trim(),
+          instagram: document.getElementById('regInstagram').value.trim(),
+          facebook: document.getElementById('regFacebook').value.trim(),
+        },
+        bio: document.getElementById('regBio').value.trim(),
+      };
+
+      const jsonString = JSON.stringify(formData, null, 2);
+      document.getElementById('submissionCode').textContent = jsonString;
+      document.getElementById('submissionResult').style.display = 'block';
+      document.getElementById('registerCastForm').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function copySubmissionData() {
+      const codeElem = document.getElementById('submissionCode');
+      if (!codeElem) return;
+      navigator.clipboard.writeText(codeElem.textContent).then(() => {
+        const btn = document.getElementById('btnCopyJson');
+        if (btn) {
+          btn.innerHTML = '<i class="fa fa-check"></i> Copied!';
+          setTimeout(() => {
+            btn.innerHTML = '<i class="fa fa-clipboard"></i> Copy JSON to Clipboard';
+          }, 2500);
+        }
+      });
+    }
+
+    function resetRegisterForm() {
+      const form = document.getElementById('registerCastForm');
+      const result = document.getElementById('submissionResult');
+      if (form) {
+        form.reset();
+        form.style.display = 'block';
+      }
+      if (result) {
+        result.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
