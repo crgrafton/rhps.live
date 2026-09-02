@@ -2,110 +2,96 @@
 <html lang="en">
 
 <head>
-  <title>THE ROCKY HORROR PICTURE SHOW</title>
-  <!-- Required meta tags -->
+  <title>rhps.live | Find Live Rocky Horror Shadowcasts</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Global interactive map and directory to find regular live shadowcast performances of The Rocky Horror Picture Show.">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    header>h1 {font-size: 1.5rem;}
-    body{
-      background-color: rgba(0, 0, 10, .96);
-      }
-  </style>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css?v=20260901_7">
 </head>
 
 <body>
-  <div class="container-fluid">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <span class="slash">//</span>rhps.live
+      <span class="live-badge">Shadowcast Map</span>
+    </a>
 
-      <header class="header">
-        <h1 class="text-center text-white">See the Rocky Horror Picture Show!</h1>
-      </header>
-
-    <div class="row">
-      <div class="col-12 col-md-9">
-        <nav class="navbar navbar-expand-md  navbar-dark">
-          <a class="navbar-brand" href="#">//rhps.live</a>
-          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active"><a class="nav-link" href="#">map <span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="casts-by-name">list of casts</a></li>
-              <li class="nav-item dropdown d-none">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">external links</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                  <a class="dropdown-item" href="#">Action 1</a>
-                  <a class="dropdown-item" href="#">Action 2</a>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </nav>
-        <iframe width="100%" height="720" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHOQxPKUvAlIWhzDiXAJIyyYHPX_FzmRs&q=Balboa+Theatre,San+Francsico" allowfullscreen></iframe>
-      </div>
-
-      <div class="col">
-        <div class="row">
-          <div class="col">
-            <h2 class="text-center text-white">Weekly Featured Cast</h2>
-            <div class="card border-success">
-              <img class="card-img-top" src="holder.js/100px180?random=yes&text=Cast Photo" alt="">
-              <div class="card-header">
-                <div class="row">
-                  <div class="col">
-                    <h4 class="card-title d-inline">Cast Name Here</h4>
-                    <!-- <span class="text-muted d-inline float-right">next show: <strong>11 April 2018</strong></span> -->
-                  </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-8"><p class="card-text">Cast City, Cast State/Province</p></div>
-                  <div class="col"><div class="btn btn-sm float-right btn-primary">See on Map</div></div>
-                </div>
-                <p class="card-text">Some quick example text to build on the crd title and make up the bulk of the card content</p>
-                <div class="row">
-                  <div class="col"><a href="">website</a></div>
-                  <div class="col"><a href="">tickets</a></div>
-                  <div class="col"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-                  <div class="col"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
-                  <div class="col"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-                  <div class="col"><a href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col">
-            <div class="card border-danger">
-              <h3 class="text-danger text-center">ADVERTISEMENT</h3>
-              <img class="card-img-top" src="holder.js/100px180?theme=lava&text=ADVERTISEMENT" alt="">
-              <h3 class="text-danger text-center">ADVERTISEMENT</h3>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="nav-actions">
+      <a href="register.html" class="btn-neon" id="btnRegister">
+        <i class="fa fa-plus-circle"></i> Register Your Cast
+      </a>
     </div>
+  </nav>
+
+  <!-- Main Map & Directory Container -->
+  <div class="main-container">
+    <!-- Map Section -->
+    <div class="map-container">
+      <!-- Search & Geolocation Bar Overlay -->
+      <div class="map-overlay-search">
+        <div class="search-input-wrapper">
+          <i class="fa fa-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search cast name, city, state, or venue...">
+        </div>
+        <button class="btn-locate" id="btnLocate" title="Find closest shadowcast to my location">
+          <i class="fa fa-location-arrow"></i> Near Me
+        </button>
+      </div>
+
+      <!-- Leaflet Map Canvas -->
+      <div id="map"></div>
+    </div>
+
+    <!-- Sidebar: Featured Cast & Directory List -->
+    <aside class="sidebar">
+      <!-- Weekly Featured Cast Section -->
+      <div class="featured-section">
+        <div class="featured-badge">
+          <i class="fa fa-star"></i> Weekly Featured Cast
+        </div>
+        <div id="featuredCastContainer">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Cast Directory Section -->
+      <div class="cast-list-section">
+        <div class="section-header">
+          <span class="section-title">Active Shadowcasts</span>
+          <span class="cast-count-badge" id="castCount">Loading...</span>
+        </div>
+        <div class="cast-list" id="castList">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </aside>
   </div>
-  <footer class="footer text-white sticky-bottom mx-3">
-    <p class="text-right">fuck copyright, rhps foundation 2020</p>
+
+  <!-- Footer & Disclaimers -->
+  <footer class="site-footer">
+    <div>
+      <strong>rhps.live</strong> &bull; Community Shadowcast Finder
+    </div>
+    <div style="max-width: 650px; font-size: 0.7rem; color: #777;">
+      <em>Disclaimer:</em> rhps.live is an independent, non-commercial fan directory. "The Rocky Horror Picture Show" is a registered trademark of 20th Century Studios / The Walt Disney Company. This site is not affiliated with, endorsed by, or sponsored by 20th Century Studios or Disney.
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="register.html"><i class="fa fa-code"></i> Embed Badge</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> Open Source</a>
+    </div>
   </footer>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.7/holder.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Application JS -->
+  <script src="js/app.js?v=20260901_8"></script>
 </body>
 
 </html>
