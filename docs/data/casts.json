@@ -1,0 +1,265 @@
+[
+  {
+    "id": "bawdy-caste-sf",
+    "name": "The Bawdy Caste",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA",
+    "venue": {
+      "name": "Balboa Theatre",
+      "address": "3630 Balboa St, San Francisco, CA 94121",
+      "coordinates": {
+        "lat": 37.7758,
+        "lng": -122.4974
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Monthly shadowcast performances at the Balboa Theatre & Bay Area venues",
+      "showtime": "11:59 PM"
+    },
+    "links": {
+      "website": "https://bawdycaste.com",
+      "tickets": "https://www.balboamovies.com",
+      "facebook": "https://facebook.com/bawdycaste"
+    },
+    "bio": "The Bawdy Caste is the San Francisco Bay Area's premier and long-standing Rocky Horror Picture Show shadowcast.",
+    "featured": true
+  },
+  {
+    "id": "sins-o-the-flesh-la",
+    "name": "Sins O' The Flesh",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "USA",
+    "venue": {
+      "name": "The Nuart Theatre",
+      "address": "11272 Santa Monica Blvd, Los Angeles, CA 90025",
+      "coordinates": {
+        "lat": 34.0457,
+        "lng": -118.4517
+      }
+    },
+    "schedule": {
+      "frequency": "Weekly",
+      "details": "Every Saturday night",
+      "showtime": "11:00 PM"
+    },
+    "links": {
+      "website": "https://sins.la",
+      "tickets": "https://www.landmarktheatres.com/our-locations/nuart-theatre/",
+      "instagram": "https://instagram.com/sins_la",
+      "facebook": "https://facebook.com/sinsla"
+    },
+    "bio": "One of the longest-running and most legendary shadowcasts in the world, performing weekly at the Nuart Theatre since 1987."
+  },
+  {
+    "id": "midnight-madness-chicago",
+    "name": "Midnight Madness",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "USA",
+    "venue": {
+      "name": "Music Box Theatre",
+      "address": "3733 N Southport Ave, Chicago, IL 60657",
+      "coordinates": {
+        "lat": 41.9497,
+        "lng": -87.6639
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Monthly midnight screenings & special seasonal runs",
+      "showtime": "11:59 PM"
+    },
+    "links": {
+      "website": "https://musicboxtheatre.com",
+      "tickets": "https://musicboxtheatre.com/events/the-rocky-horror-picture-show",
+      "facebook": "https://facebook.com/MidnightMadnessChicago"
+    },
+    "bio": "Chicago's beloved shadowcast bringing high energy and midnight madness to the iconic Music Box Theatre."
+  },
+  {
+    "id": "nyc-rhps-cast",
+    "name": "The NYC RHPS Cast",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "venue": {
+      "name": "Cinépolis Chelsea",
+      "address": "260 W 23rd St, New York, NY 10011",
+      "coordinates": {
+        "lat": 40.7449,
+        "lng": -73.9976
+      }
+    },
+    "schedule": {
+      "frequency": "Bi-weekly",
+      "details": "1st & 3rd Saturday of each month",
+      "showtime": "10:00 PM"
+    },
+    "links": {
+      "website": "https://nycrhps.org",
+      "tickets": "https://nycrhps.org/tickets",
+      "instagram": "https://instagram.com/nycrhps",
+      "facebook": "https://facebook.com/nycrhps"
+    },
+    "bio": "New York City's official shadowcast bringing live floor shows and interactive cinema to Manhattan."
+  },
+  {
+    "id": "austin-o-crafters",
+    "name": "O'Brien's Orchestra",
+    "city": "Austin",
+    "state": "TX",
+    "country": "USA",
+    "venue": {
+      "name": "Alamo Drafthouse South Lamar",
+      "address": "1120 S Lamar Blvd, Austin, TX 78704",
+      "coordinates": {
+        "lat": 30.2554,
+        "lng": -97.7631
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "First Saturday of every month",
+      "showtime": "11:30 PM"
+    },
+    "links": {
+      "website": "https://obriensorchestra.com",
+      "tickets": "https://drafthouse.com/austin",
+      "instagram": "https://instagram.com/obriensorchestra"
+    },
+    "bio": "Austin's rowdiest shadowcast performing at the Alamo Drafthouse."
+  },
+  {
+    "id": "colorados-elusive-ingredients-denver",
+    "name": "Colorado's Elusive Ingredients",
+    "city": "Denver",
+    "state": "CO",
+    "country": "USA",
+    "venue": {
+      "name": "Esquire Theatre / Sie FilmCenter",
+      "address": "2510 E Colfax Ave, Denver, CO 80206",
+      "coordinates": {
+        "lat": 39.7402,
+        "lng": -104.9572
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Monthly shows on select Saturdays",
+      "showtime": "11:59 PM"
+    },
+    "links": {
+      "website": "https://coloradoselusiveingredients.com",
+      "tickets": "https://denverfilm.org",
+      "facebook": "https://facebook.com/RockyHorrorDenver"
+    },
+    "bio": "Denver's premier shadowcast keeping the weird and wonderful alive in the Mile High City."
+  },
+  {
+    "id": "vicarious-theatre-co-seattle",
+    "name": "Vicarious Theatre Company",
+    "city": "Seattle",
+    "state": "WA",
+    "country": "USA",
+    "venue": {
+      "name": "Central Cinema",
+      "address": "1411 21st Ave, Seattle, WA 98122",
+      "coordinates": {
+        "lat": 47.6139,
+        "lng": -122.3051
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Second weekend of every month",
+      "showtime": "11:00 PM"
+    },
+    "links": {
+      "website": "https://central-cinema.com",
+      "tickets": "https://central-cinema.com",
+      "instagram": "https://instagram.com/vicarioustheatre"
+    },
+    "bio": "Seattle's resident shadowcast performing with full prop kits and dynamic callbacks at Central Cinema."
+  },
+  {
+    "id": "lips-down-on-dixie-atlanta",
+    "name": "Lips Down on Dixie",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "USA",
+    "venue": {
+      "name": "Plaza Theatre",
+      "address": "1049 Ponce De Leon Ave NE, Atlanta, GA 30306",
+      "coordinates": {
+        "lat": 33.7734,
+        "lng": -84.3524
+      }
+    },
+    "schedule": {
+      "frequency": "Weekly",
+      "details": "Every Friday & Saturday midnight",
+      "showtime": "11:59 PM"
+    },
+    "links": {
+      "website": "https://lipsdownondixie.com",
+      "tickets": "https://plazaatlanta.com",
+      "facebook": "https://facebook.com/lipsdownondixie"
+    },
+    "bio": "Atlanta's longest-running live shadowcast performing weekly at the historic Plaza Theatre."
+  },
+  {
+    "id": "rich-weirdoes-orlando",
+    "name": "The Rich Weirdoes",
+    "city": "Orlando",
+    "state": "FL",
+    "country": "USA",
+    "venue": {
+      "name": "Enzian Theater",
+      "address": "1300 S Orlando Ave, Maitland, FL 32751",
+      "coordinates": {
+        "lat": 28.6148,
+        "lng": -81.3653
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Second Saturday of each month",
+      "showtime": "11:59 PM"
+    },
+    "links": {
+      "website": "https://richweirdoes.com",
+      "tickets": "https://enzian.org",
+      "facebook": "https://facebook.com/RichWeirdoes"
+    },
+    "bio": "Orlando's wildly talented shadowcast bringing theatrical mayhem and audience participation to Central Florida."
+  },
+  {
+    "id": "london-mayhem-uk",
+    "name": "The London Rocky Horror Shadowcast",
+    "city": "London",
+    "state": "Greater London",
+    "country": "UK",
+    "venue": {
+      "name": "Prince Charles Cinema",
+      "address": "7 Leicester Pl, London WC2H 7BY, United Kingdom",
+      "coordinates": {
+        "lat": 51.5115,
+        "lng": -0.1302
+      }
+    },
+    "schedule": {
+      "frequency": "Monthly",
+      "details": "Monthly interactive sing-along and shadowcast screenings",
+      "showtime": "8:45 PM"
+    },
+    "links": {
+      "website": "https://princecharlescinema.com",
+      "tickets": "https://princecharlescinema.com",
+      "instagram": "https://instagram.com/princecharlescinema"
+    },
+    "bio": "The UK's legendary interactive Rocky Horror screenings at the world-famous Prince Charles Cinema in Leicester Square."
+  }
+]
