@@ -1,0 +1,28 @@
+{
+  "name": "rhps.live",
+  "version": "1.0.0",
+  "description": "`rhps.live` is a community-driven, open-access directory and interactive map for finding regular live *The Rocky Horror Picture Show* shadowcast performances worldwide.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crgrafton/rhps.live.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/crgrafton/rhps.live/issues"
+  },
+  "homepage": "https://github.com/crgrafton/rhps.live#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261104.1",
+    "wrangler": "^4.157.0"
+  }
+}

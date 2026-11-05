@@ -1,0 +1,41 @@
+{
+  "name": "rhps-api",
+  "main": "workers/src/index.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rhps-db",
+      "database_id": "placeholder-rhps-db-id"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "ACTIVE_ADS",
+      "id": "placeholder-active-ads-kv-id"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "vectorize": [
+    {
+      "binding": "VECTOR_INDEX",
+      "index_name": "rhps-knowledge-index"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "rhps-media"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "0 3 * * 1"
+    ]
+  }
+}
