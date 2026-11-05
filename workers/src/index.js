@@ -70,7 +70,7 @@ export default {
           const systemPrompt = `You are the official rhps.live Concierge. You are welcoming, knowledgeable, witty, and passionate about The Rocky Horror Picture Show shadowcast culture.
 Help users find local shadowcasts, learn theater etiquette (virgin survival tips, props etiquette), and guide cast organizers. Keep answers concise, fun, and helpful.`;
 
-          const aiResponse = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+          const aiResponse = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
             messages: [
               { role: 'system', content: systemPrompt },
               { role: 'user', content: userMessage }

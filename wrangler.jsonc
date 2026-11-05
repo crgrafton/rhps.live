@@ -9,30 +9,18 @@
     {
       "binding": "DB",
       "database_name": "rhps-db",
-      "database_id": "placeholder-rhps-db-id"
+      "database_id": "86191834-e507-4ee2-8e53-65a5a55f8cce"
     }
   ],
   "kv_namespaces": [
     {
       "binding": "ACTIVE_ADS",
-      "id": "placeholder-active-ads-kv-id"
+      "id": "e376d29960924f93b3af022fd403b079"
     }
   ],
   "ai": {
     "binding": "AI"
   },
-  "vectorize": [
-    {
-      "binding": "VECTOR_INDEX",
-      "index_name": "rhps-knowledge-index"
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "MEDIA_BUCKET",
-      "bucket_name": "rhps-media"
-    }
-  ],
   "triggers": {
     "crons": [
       "0 3 * * 1"
